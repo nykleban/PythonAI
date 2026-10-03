@@ -1,15 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = {"OrderID": [1001, 1002, 1003],
-        "Customer": ["Alice", "Bob", "Alice"],
-        "Product": ["Laptop", "Chair", "Mouse"],
-        "Category": ["Electronics", "Furniture", "Electronics"],
-        "Quantity": [1, 2, 3],
-        "Price": [1500, 180, 25],
-        "OrderDate": ["2023-06-01", "2023-06-03", "2023-06-05"]}
-#1
-df = pd.DataFrame(data)
+df = pd.read_csv("orders.csv")
 df["OrderDate"] = pd.to_datetime(df["OrderDate"])
 print(df,"\n")
 
