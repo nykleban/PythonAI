@@ -1,13 +1,24 @@
 import glob
 import json
+import nltk
 import os
-import re
 import matplotlib.pyplot as plt
 import pandas as pd
-from textblob import TextBlob
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.tokenize import word_tokenize
 
 # Визначаємо поточну папку, де лежить цей скрипт
 current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Завантаження ресурсів NLTK
+for resource in ("punkt", "punkt_tab", "stopwords", "wordnet"):
+    if not nltk.download(resource, quiet=True):
+        raise LookupError(f"Не вдалося завантажити ресурс NLTK: {resource}")
+
+stop_words = set(stopwords.words("english")) | set(stopwords.words("russian"))
+stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
 
 # Автоматичний пошук завантаженого CSV-файлу від Rozetka
 csv_files = glob.glob(os.path.join(current_dir, "*rozetka*.csv"))
@@ -59,37 +70,7 @@ ukr_stopwords = {
     "для",
     "по",
 }
-
-
-def ukr_stem(word):
-    """Стеммінг: відсікання типових закінчень"""
-    word = word.lower()
-    for suffix in [
-        "ого",
-        "ому",
-        "ими",
-        "ий",
-        "им",
-        "ім",
-        "их",
-        "ів",
-        "ами",
-        "ах",
-        "ою",
-        "ею",
-        "ам",
-        "і",
-        "а",
-        "я",
-        "у",
-        "ю",
-        "е",
-        "є",
-        "о",
-    ]:
-        if len(word) > 4 and word.endswith(suffix):
-            return word[: -len(suffix)]
-    return word
+stop_words.update(ukr_stopwords)
 
 
 # Маркери для аналізу тональності відгуків
@@ -113,18 +94,26 @@ for idx, row in df.iterrows():
     author = row.get("Author", f"User_{idx+1}")
 
     # 1. Токенізація
-    tokens = re.findall(r"\b\w+\b", text)
+    tokens = word_tokenize(text)
 
     # 2. Видалення стоп-слів
     filtered_tokens = [
-        w for w in tokens if w.lower() not in ukr_stopwords and len(w) > 1
+        w
+        for w in tokens
+        if w.isalpha() and len(w) > 1 and w.lower() not in stop_words
     ]
 
     # 3. Стеммінг
-    stemmed = [ukr_stem(w) for w in filtered_tokens]
+    stemmed = [
+        stemmer.stem(w.lower()) if w.isascii() else w.lower()
+        for w in filtered_tokens
+    ]
 
-    # 4. Лематизація (нижній регістр / базова форма)
-    lemmatized = [w.lower() for w in filtered_tokens]
+    # 4. Лематизація ASCII-слів; для інших мов зберігаємо нижній регістр
+    lemmatized = [
+        lemmatizer.lemmatize(w.lower()) if w.isascii() else w.lower()
+        for w in filtered_tokens
+    ]
 
     # Визначення тональності
     lower_text = text.lower()
