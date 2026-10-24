@@ -1,0 +1,155 @@
+[
+  {
+    "text": "Dogs were running outside!",
+    "tokens": [
+      "Dogs",
+      "were",
+      "running",
+      "outside",
+      "!"
+    ],
+    "stemmed": [
+      "dog",
+      "run",
+      "outsid"
+    ],
+    "lemmatized": [
+      "dog",
+      "running",
+      "outside"
+    ],
+    "sentiment": "Neutral"
+  },
+  {
+    "text": "Too small, would prefer a mat for a work surface that was anti static.",
+    "tokens": [
+      "Too",
+      "small",
+      ",",
+      "would",
+      "prefer",
+      "a",
+      "mat",
+      "for",
+      "a",
+      "work",
+      "surface",
+      "that",
+      "was",
+      "anti",
+      "static",
+      "."
+    ],
+    "stemmed": [
+      "small",
+      "would",
+      "prefer",
+      "mat",
+      "work",
+      "surfac",
+      "anti",
+      "static"
+    ],
+    "lemmatized": [
+      "small",
+      "would",
+      "prefer",
+      "mat",
+      "work",
+      "surface",
+      "anti",
+      "static"
+    ],
+    "sentiment": "Positive"
+  },
+  {
+    "text": "Excellent quality, absolutely love it! Fast delivery.",
+    "tokens": [
+      "Excellent",
+      "quality",
+      ",",
+      "absolutely",
+      "love",
+      "it",
+      "!",
+      "Fast",
+      "delivery",
+      "."
+    ],
+    "stemmed": [
+      "excel",
+      "qualiti",
+      "absolut",
+      "love",
+      "fast",
+      "deliveri"
+    ],
+    "lemmatized": [
+      "excellent",
+      "quality",
+      "absolutely",
+      "love",
+      "fast",
+      "delivery"
+    ],
+    "sentiment": "Positive"
+  },
+  {
+    "text": "Very bad experience, broken on arrival and terrible support.",
+    "tokens": [
+      "Very",
+      "bad",
+      "experience",
+      ",",
+      "broken",
+      "on",
+      "arrival",
+      "and",
+      "terrible",
+      "support",
+      "."
+    ],
+    "stemmed": [
+      "bad",
+      "experi",
+      "broken",
+      "arriv",
+      "terribl",
+      "support"
+    ],
+    "lemmatized": [
+      "bad",
+      "experience",
+      "broken",
+      "arrival",
+      "terrible",
+      "support"
+    ],
+    "sentiment": "Negative"
+  },
+  {
+    "text": "It works fine, nothing special.",
+    "tokens": [
+      "It",
+      "works",
+      "fine",
+      ",",
+      "nothing",
+      "special",
+      "."
+    ],
+    "stemmed": [
+      "work",
+      "fine",
+      "noth",
+      "special"
+    ],
+    "lemmatized": [
+      "work",
+      "fine",
+      "nothing",
+      "special"
+    ],
+    "sentiment": "Positive"
+  }
+]

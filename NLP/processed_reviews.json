@@ -1,0 +1,170 @@
+[
+    {
+        "original_text": "Dogs were running outside!",
+        "sentences": [
+            "Dogs were running outside!"
+        ],
+        "tokens": [
+            "Dogs",
+            "were",
+            "running",
+            "outside",
+            "!"
+        ],
+        "filtered_tokens": [
+            "Dogs",
+            "running",
+            "outside"
+        ],
+        "stemmed": [
+            "dog",
+            "run",
+            "outsid"
+        ],
+        "lemmatized": [
+            "dog",
+            "running",
+            "outside"
+        ]
+    },
+    {
+        "original_text": "Too small, would prefer a mat for a work surface that was anti static.",
+        "sentences": [
+            "Too small, would prefer a mat for a work surface that was anti static."
+        ],
+        "tokens": [
+            "Too",
+            "small",
+            ",",
+            "would",
+            "prefer",
+            "a",
+            "mat",
+            "for",
+            "a",
+            "work",
+            "surface",
+            "that",
+            "was",
+            "anti",
+            "static",
+            "."
+        ],
+        "filtered_tokens": [
+            "small",
+            "would",
+            "prefer",
+            "mat",
+            "work",
+            "surface",
+            "anti",
+            "static"
+        ],
+        "stemmed": [
+            "small",
+            "would",
+            "prefer",
+            "mat",
+            "work",
+            "surfac",
+            "anti",
+            "static"
+        ],
+        "lemmatized": [
+            "small",
+            "would",
+            "prefer",
+            "mat",
+            "work",
+            "surface",
+            "anti",
+            "static"
+        ]
+    },
+    {
+        "original_text": "Excellent product, works perfectly and fast delivery!",
+        "sentences": [
+            "Excellent product, works perfectly and fast delivery!"
+        ],
+        "tokens": [
+            "Excellent",
+            "product",
+            ",",
+            "works",
+            "perfectly",
+            "and",
+            "fast",
+            "delivery",
+            "!"
+        ],
+        "filtered_tokens": [
+            "Excellent",
+            "product",
+            "works",
+            "perfectly",
+            "fast",
+            "delivery"
+        ],
+        "stemmed": [
+            "excel",
+            "product",
+            "work",
+            "perfectli",
+            "fast",
+            "deliveri"
+        ],
+        "lemmatized": [
+            "excellent",
+            "product",
+            "work",
+            "perfectly",
+            "fast",
+            "delivery"
+        ]
+    },
+    {
+        "original_text": "The screen replacement kit was missing one crucial screwdriver.",
+        "sentences": [
+            "The screen replacement kit was missing one crucial screwdriver."
+        ],
+        "tokens": [
+            "The",
+            "screen",
+            "replacement",
+            "kit",
+            "was",
+            "missing",
+            "one",
+            "crucial",
+            "screwdriver",
+            "."
+        ],
+        "filtered_tokens": [
+            "screen",
+            "replacement",
+            "kit",
+            "missing",
+            "one",
+            "crucial",
+            "screwdriver"
+        ],
+        "stemmed": [
+            "screen",
+            "replac",
+            "kit",
+            "miss",
+            "one",
+            "crucial",
+            "screwdriv"
+        ],
+        "lemmatized": [
+            "screen",
+            "replacement",
+            "kit",
+            "missing",
+            "one",
+            "crucial",
+            "screwdriver"
+        ]
+    }
+]
